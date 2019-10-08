@@ -44,14 +44,6 @@ namespace Planner {
             return _owner;
         }
 
-        public override string ToString()
-        {
-            return
-            GetAddress();
-            // $"Designed By:  {GetDesigner()}";
-            // $"Constructed on:  {GetDate()}";
-            //$"Owned By:  {GetOwner()}";
-            
-        }
+
     }
 }

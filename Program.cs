@@ -25,9 +25,20 @@ namespace Planner {
             build2.Purchase ("Gail Peck");
             build3.Purchase ("Chris Diez");
 
-            Console.WriteLine (build1);
-            Console.WriteLine (build2);
-            Console.WriteLine (build3);
+            City city1 = new City ("megalopolis", 1944);
+            city1.Mayor = "Boss Hog";
+
+            city1.buildings.Add (build1);
+            city1.buildings.Add (build2);
+            city1.buildings.Add (build3);
+
+            Console.WriteLine ($"City {city1.GetNameOfCity()}");
+            Console.WriteLine ($"Year Established: {city1.GetYear()}");
+            Console.WriteLine ($"City Buildings:");
+
+            foreach (Building building in city1.buildings) {
+                Console.WriteLine ($"{building.GetAddress()}");
+            }
 
         }
 
